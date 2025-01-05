@@ -3,7 +3,7 @@ import adviceReducer from './adviceSlice'
 
 const adviceStore = configureStore({
     reducer:{
-        adivce:adviceReducer,
+        adviceStore:adviceReducer,
     }
 })
 

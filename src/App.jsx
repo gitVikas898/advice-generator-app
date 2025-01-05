@@ -4,13 +4,13 @@ import Advice from './components/Advice'
 
 function App() {
 
-  const advice = useSelector((store)=>store.advices.advice.advice);
-  const id =  useSelector(store=>store.advice?.slip.id);
+  const adviceData = useSelector((store)=>store.adviceStore?.advice?.advice);
+  const id = useSelector((store)=>store.adviceStore?.advice?.id);
 
   return (
     <>
       <div className='app'>
-          <Advice advice={advice} id={id}></Advice>
+          <Advice advice={adviceData} id={id}></Advice>
       </div>
     </>
   )

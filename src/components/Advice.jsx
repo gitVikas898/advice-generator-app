@@ -1,25 +1,30 @@
 import React from 'react'
 
-const Advice = () => {
+import patternDivider from '../utils/pattern-divider-desktop.svg'
+
+import dice from '../utils/icon-dice.svg'
+import { usegetAdvice } from '../hooks/usegetAdvice'
+
+const Advice = ({advice,id}) => {
+
+    usegetAdvice();
   return (
     <div className='advice-box'>
         <div>
-            <h1>Advice # ""</h1>
+            <h3>Advice # "{id}"</h3>
         </div>
 
         <div>
-            <p>"Honesty is the best policy"</p>
+            <p>{advice}</p>
         </div>
 
         <div>
-            {/**
-             * pattern
-             */}
+           <div>
+                <img src={patternDivider} alt="" />
+           </div>
         </div>
-        <div>
-             {/**
-             *  circle click button
-             */}
+        <div className='circle'>
+            <img src={dice} alt="" />
         </div>
     </div>
   )

@@ -16,4 +16,7 @@ export const usegetAdvice = () =>{
     useEffect(()=>{
         getData();
     },[])
+
+
+    return { fetchNewAdvice: getData };
 }

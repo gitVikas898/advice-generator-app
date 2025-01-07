@@ -11,56 +11,97 @@
 
 }
 body{
-  margin: 0;
-  display: grid;
-  min-height: 100vh;
-  place-items: center;
   background-color: var(--dark-blue);
   font-family: Manrope;
+  margin: 0;
 }
 
 h3,p{
   margin: 0;
+  text-align: center;
+}
+
+h3{
+  color: var(--primary-color-Neon-Greenn);
+}
+
+p{
+  font-size: 28px;
+  color: var(--primary-color-Light-Cyan);
 }
 
 
-
-.advice-box{
+.app{
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
   align-items: center;
-  justify-content: space-between;
-  max-width: 40rem;
-  padding: 2rem 3rem;
+  justify-content: center;
+}
+.advice-box{
+  text-align: justify;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--dark-grayish-blue);
+  max-width: 480px;
+  margin:1.5rem;
+  padding: 2rem 1rem;
   border-radius: 0.5rem;
   position: relative;
 }
-.advice-box h3{
-  color: var(--primary-color-Neon-Greenn);
-}
-.advice-box p{
-  color: var(--primary-color-Light-Cyan);
-  font-size: 1.75rem;
-}
 .circle{
-
-  height: 60px;
   width: 60px;
+  height: 60px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--primary-color-Neon-Greenn);
   position: absolute;
-  top: 13rem;
-  transition: box-shadow 0.3s ease;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   cursor: pointer;
+  transition: box-shadow 200ms ease-in-out;
 }
 .circle:hover{
   box-shadow: 
-    0 0 10px hsl(150, 100%, 66%),
-    0 0 10px hsl(150, 100%, 66%),
-    0 0 10px hsl(150, 100%, 66%);
+    0 0 5px hsl(150, 100%, 66%),
+    0 0 5px hsl(150, 100%, 66%),
+    0 0 5px hsl(150, 100%, 66%);
+}
+.img-holder{
+  width: 320px;
+  margin-bottom: 1rem;
+}
+.img{
+  width: 100%;
+}
+.shimmer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.line{
+  padding: 1px;
+  background-color: var(--primary-color-Light-Cyan);
+  width: 200px;
+}
+.dice{
+  padding: 0.5rem;
+  background-color: var(--primary-color-Light-Cyan);
+}
+
+@media(max-width:480px) {
+  .advice-box{
+    width: 320px;
+  }
+
+  p{
+    font-size: 18px;
+  }
+
 }

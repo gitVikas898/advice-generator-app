@@ -6,24 +6,16 @@ import dice from '../utils/icon-dice.svg'
 import { usegetAdvice } from '../hooks/usegetAdvice'
 
 const Advice = ({advice,id}) => {
-
-    usegetAdvice();
+  const { fetchNewAdvice } = usegetAdvice();
   return (
     <div className='advice-box'>
-        <div>
-            <h3>Advice # "{id}"</h3>
+        {id ? <h3>Advice #{id}</h3> : <h3>Loading...</h3>}
+       {advice ? <p>"{advice}"</p> : <p>Loading...</p>} 
+        <div className='img-holder'>
+            <img src={patternDivider} alt="" className='img'/>
         </div>
 
-        <div>
-            <p>{advice}</p>
-        </div>
-
-        <div>
-           <div>
-                <img src={patternDivider} alt="" />
-           </div>
-        </div>
-        <div className='circle'>
+        <div className='circle' onClick={fetchNewAdvice}>
             <img src={dice} alt="" />
         </div>
     </div>
